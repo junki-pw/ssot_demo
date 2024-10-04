@@ -21,3 +21,8 @@ Future<List<String>> fetchPosts(FetchPostsRef ref) async {
       .fetchPosts()
       .then((value) => value.map((e) => e.postId).toList());
 }
+
+// @riverpod
+// Post? post(PostRef ref,String id){
+//   final Post? post = ref.watch(postRepoProvider).data(postId);
+// }
