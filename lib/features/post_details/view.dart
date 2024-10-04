@@ -22,15 +22,10 @@ class PostDetailsView extends ConsumerWidget {
         ),
         data: (data) {
           final post = data.post;
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('id: ${post.postId}'),
-              ListTile(
-                title: Text(post.title),
-                subtitle: Text(post.comment),
-              ),
-            ],
+          return ListTile(
+            title: Text(post.title),
+            subtitle: Text(post.comment),
+            trailing: Text(post.postId),
           );
         },
       ),

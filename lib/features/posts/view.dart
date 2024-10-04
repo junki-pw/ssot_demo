@@ -14,7 +14,7 @@ class PostsView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Post'),
+        title: const Text('Posts 通常バージョン'),
       ),
       body: state.when(
         error: (error, stack) => const Text('エラー発生'),
@@ -55,7 +55,7 @@ class PostsSSOTView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Post'),
+        title: const Text('Posts SSOT'),
       ),
       body: state.when(
         error: (error, stack) => const Text('エラー発生'),
@@ -75,6 +75,7 @@ class PostsSSOTView extends ConsumerWidget {
               return ListTile(
                 title: Text(post.title),
                 subtitle: Text(post.comment),
+                trailing: Text(post.postId),
                 onTap: () {
                   Navigator.push(
                     context,
